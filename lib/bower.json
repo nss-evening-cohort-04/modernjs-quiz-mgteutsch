@@ -1,0 +1,20 @@
+{
+  "name": "lib",
+  "description": "",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Mike Teutsch <mgt0117@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nss-evening-cohort-04/modernjs-quiz-mgteutsch",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

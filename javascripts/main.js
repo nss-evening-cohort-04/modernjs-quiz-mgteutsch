@@ -21,8 +21,8 @@ $('#battlebtn').on("click", () => {
 		$('#player1-battleBot').append('<h2>' + player1_Name + '</h2>');
 		$('#player1-battleBot').append('<h3>' + player1_RobotChoice + '</h3>');
 
-		let battleBot1 = new Robot.BattleBots.ThatsNoMoon(); // see notes below
-		console.log(battleBot1);
+		let battleBot1 = new Robot.BattleBots[player1_RobotChoice](); // see notes below
+		console.log("battleBot1:", battleBot1);
 		
 		//Input Player 2
 		let player2_Name = $('#player2-name').val();
@@ -31,8 +31,10 @@ $('#battlebtn').on("click", () => {
 		$('#player2-battleBot').append('<h2>' + player2_Name + '</h2>');
 		$('#player2-battleBot').append('<h3>' + player2_RobotChoice + '</h3>');
 
-		let battleBot2 = new Robot.BattleBots.UnsuspectingRubberDucky(); // see notes below
-		console.log(battleBot2);
+		let battleBot2 = new Robot.BattleBots[player2_RobotChoice](); 
+
+		console.log("battleBot2:", battleBot2);
+
 
 		//Attack Function
 		$('#attackbtn').on("click", () => {
@@ -63,14 +65,5 @@ $('#battlebtn').on("click", () => {
 });
 
 });
-
-/* NOTES:
-I loaded in a pre-set robot for now. For whatever reason, no matter what I try,
-I can't new Robot.BattleBots.__________() to work. Since the other battle functionality
-isn't affected, I just moved on. We can look over it in class.
-
-Also, I am having inconsitant errors with my http-server...
-It will either not load in new edits from my docs, or it will freeze elements when I
-inspect, or it will do something else. Again, something else I can talk over in class. */
 
 

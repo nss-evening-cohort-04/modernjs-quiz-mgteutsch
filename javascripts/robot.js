@@ -53,7 +53,7 @@ var Robot = (function(CreateRobot) {
 		this.team = "Protagonist";
 		this.attacks = ["ISS, ISS Baby", "Revenge of the Nerds", "Curiosity Killed the Cat (and Everyone Else)"];
 	};
-	CreateRobot.BattleBots.ThatsNoMoon.prototype = new CreateRobot.BattleBots.Aerial();
+	CreateRobot.BattleBots.WrathOfNasa.prototype = new CreateRobot.BattleBots.Aerial();
 
 
 	CreateRobot.BattleBots.PleaseAndTankYou = function() {

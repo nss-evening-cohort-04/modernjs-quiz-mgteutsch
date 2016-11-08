@@ -1,0 +1,17 @@
+h1 {
+	text-align: center;
+}
+
+.row, #message-box, .loser-area {
+	text-align: center;
+}
+
+.robot-radiobtn {
+	text-align: right;
+}
+
+.hidden {
+	display: none;
+}
+
+

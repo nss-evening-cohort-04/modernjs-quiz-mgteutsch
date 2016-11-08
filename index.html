@@ -3,15 +3,97 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
+	<title>Modern JS Quiz: Robot Battleground</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
 
-<h1>Quiz</h1>
+<h1>BATTLE BOTS: Mechanized Melee Mahem</h1>
+
+<div class="select-players row">
+	<div class="player1-selection col-sm-6">
+		<h2>Player 1:</h2>
+		<input type="text" class="player-names" id="player1-name" placeholder="Type Your Name Here">
+		<div class="robot-options" id="player1-robot-option">
+			<h2>Choose Your Robot:</h2>
+				<h3>Aerial Type:</h3>
+					<input type="radio" class="robot-radiobtn1" name="player1-robot" value="ThatsNoMoon"> That's No Moon <br/>
+					<input type="radio" class="robot-radiobtn1" name="player1-robot" value="WrathOfNasa"> Wrath of NASA <br/>
+				<h3>Ground Type:</h3>
+					<input type="radio" class="robot-radiobtn1" name="player1-robot" value="PleaseAndTankYou"> Please-and-Tank-You <br/>
+					<input type="radio" class="robot-radiobtn1" name="player1-robot" value="PuritanEarthquaker"> Puritan Earthquaker <br/>
+				<h3>Water Type:</h3>
+					<input type="radio" class="robot-radiobtn1" name="player1-robot" value="CthulhusStepmother"> Cthulhu’s Stepmother <br/>
+					<input type="radio" class="robot-radiobtn1" name="player1-robot" value="UnsuspectingRubberDucky"> Unsuspecting Rubber Ducky <br/>
+		</div>
+	</div>
+	
+	<div class="player2-selection col-md-6">
+		<h2>Player 2:</h2>
+		<input type="text" class="player-names" id="player2-name" placeholder="Type Your Name Here">
+		<div class="robot-options" id="player2-robot-option">
+			<h2>Choose Your Robot:</h2>
+				<h3>Aerial Type:</h3>
+					<input type="radio" class="robot-radiobtn2" name="player2-robot" value="ThatsNoMoon"> That's No Moon <br/>
+					<input type="radio" class="robot-radiobtn2" name="player2-robot" value="WrathOfNasa"> Wrath of NASA <br/>
+				<h3>Ground Type:</h3>
+					<input type="radio" class="robot-radiobtn2" name="player2-robot" value="PleaseAndTankYou"> Please-and-Tank-You <br/>
+					<input type="radio" class="robot-radiobtn2" name="player2-robot" value="PuritanEarthquaker"> Puritan Earthquaker <br/>
+				<h3>Water Type:</h3>
+					<input type="radio" class="robot-radiobtn2" name="player2-robot" value="CthulhusStepmother"> Cthulhu’s Stepmother <br/>
+					<input type="radio" class="robot-radiobtn2" name="player2-robot" value="UnsuspectingRubberDucky"> Unsuspecting Rubber Ducky <br/>
+		</div>
+	</div>
+</div>
+
+<br/>
+<hr/>
+
+
+<div class="battlebtn-area row">
+	<button class=".col-md-6 .col-md-offset-3 btn btn-danger" type="button" id="battlebtn">Battle!</button>
+	<p class="hidden" id="error-message">Please complete all inputs for both Player 1 and Player 2</p>
+</div>
+
+
+<div class="attackbtn-area row hidden">
+<button class=".col-md-6 .col-md-offset-3 btn-lg btn-danger" type="button" id="attackbtn">Attack!</button>
+</div>
+
+<hr/>
+
+
+<div class="battleground-area hidden">
+
+	<div class="col-sm-6" id="player1-battleBot">
+	</div>
+	
+	<div class="col-sm-6" id="player2-battleBot">
+	</div>
+	
+	<div id="message-box">
+		<div class=".col-sm-6" id="player1-messages">
+		</div>
+		<div class=".col-sm-6" id="player2-messages">
+		</div>
+	</div>
+
+
+</div>
+
+<div class="loser-area hidden">
+	<h2 id="loser-message"></h2>
+	<button type="button" class="btn btn-primary" onClick="window.location.reload()">Play Again</button>
+</div>
+
+
+
 
 
 <script src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/javascripts/robot.js"></script>
 <script src="/javascripts/main.js"></script>
+
 </body>
 </html>
